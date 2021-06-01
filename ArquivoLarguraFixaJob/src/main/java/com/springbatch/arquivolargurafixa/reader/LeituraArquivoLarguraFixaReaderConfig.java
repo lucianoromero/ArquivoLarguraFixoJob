@@ -17,6 +17,7 @@ public class LeituraArquivoLarguraFixaReaderConfig {
 	@StepScope
 	@Bean
 	public FlatFileItemReader<Cliente> leituraArquivoLarguraFixaReader(
+			//Rerecendo o arquivo como paramentro 
 			@Value("#{jobParameters['arquivoClientes']}") Resource arquivoClientes) {
 		return new FlatFileItemReaderBuilder<Cliente>()
 				.name("leituraArquivoLarguraFixaReader")
